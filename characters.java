@@ -1,3 +1,4 @@
+
 import java.util.Random;
 import java.util.ArrayList;
 
@@ -6,7 +7,7 @@ import java.util.ArrayList;
 * This class contains methods to add a character to the villian list, place a character in a random location
 */
 
-public class Character {
+public class characters{
 
     protected String name;
     protected int strength;
@@ -15,7 +16,7 @@ public class Character {
     private String [] schoolRooms = {"Emma's Office", "Principal's Office", "Choir Room"};
     public ArrayList<Object> villianChars = new ArrayList<Object>();
 
-    public Character(String name, int strength, boolean isVillian) {
+    public characters (String name, int strength, boolean isVillian) {
          this.name = name;
          this.strength = strength; 
          Randomizer randLocal = new Randomizer();
@@ -38,26 +39,17 @@ public class Character {
     }
 
 
-    /**
-   * Adds a character to the villian list if they are a villian
-   */
-    private void villianList(){
-        if (this.isVillian){
-        villianChars.set(-1, this);
-    }
-}
+
 
     public static void main(String[] args) {
-        Character Santana = new Character ("Santana", 12, false);
+        characters Santana = new characters ("Santana", 12, false);
         System.out.println(Santana.location);
-        Character Will = new Character("Will", 100, true);
-        Character Rachel = new Character("Rachel", 100, true);
-        Will.villianList();
-        Rachel.villianList();
+        characters Will = new characters("Will", 100, true);
+        characters Rachel = new characters("Rachel", 100, true);
+       
 
-
-        
     
         
 }
 }
+

@@ -1,9 +1,7 @@
 import java.util.Random;
+import java.util.List;
 
-
-    
-
-public class Randomizer {
+public class Randomizer{
    
     Random rand = new Random();
 
@@ -15,6 +13,14 @@ public class Randomizer {
     String listSelection = randList[randIndex];
     return listSelection;
     }
+
+    public String randomSelect(List<String> randList){
+        int max = randList.size();
+        int randIndex = rand.nextInt(max);
+        String listSelection = randList.get(randIndex);
+        return listSelection;
+        }
+
 
     
 

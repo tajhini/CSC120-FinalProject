@@ -7,7 +7,8 @@ public class User {
     protected int health;
     protected String location;
     private String [] gameQues = {"Which band is abbreviated to 1D? "};
-    
+    private String [] gameAns = {"One Direction"};
+    public String answer;
     private int slushCount;
     
 
@@ -23,6 +24,7 @@ public class User {
     String question = randQuestion.randomSelect(gameQues);
     return question;
     }
+
 
     public void getCharname(String nameChar){
         this.name = nameChar;
