@@ -1,5 +1,7 @@
 import java.util.Random;
 import java.util.List;
+import java.util.Set;
+import java.util.ArrayList;
 
 public class Randomizer{
    
@@ -7,22 +9,29 @@ public class Randomizer{
 
     
     //prodeuces a ranndom integer for the location of the helper characters
-    public String randomSelect(String [] randList){
+    public int randomSelect(String [] randList){
     int max = randList.length;
     int randIndex = rand.nextInt(max);
-    String listSelection = randList[randIndex];
-    return listSelection;
+    return randIndex;
     }
 
-    public String randomSelect(List<String> randList){
+    public int randomSelect(List<String> randList){
         int max = randList.size();
         int randIndex = rand.nextInt(max);
-        String listSelection = randList.get(randIndex);
-        return listSelection;
+        return randIndex;
         }
+   
+    public int randomSelect(Set<String> randList){
+            int max = randList.size();
+            int randIndex = rand.nextInt(max);
+            return randIndex;
+            }
 
-
-    
+            public int randomSelect( ArrayList<characters> randList){
+                int max = randList.size()-1;
+                int randIndex = rand.nextInt(max);
+                return randIndex;
+                }
 
 
 }

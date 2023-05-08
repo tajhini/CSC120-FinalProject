@@ -14,16 +14,26 @@ public class characters{
     protected String location;
     public boolean isVillian;
     private String [] schoolRooms = {"Emma's Office", "Principal's Office", "Choir Room"};
-    public ArrayList<Object> villianChars = new ArrayList<Object>();
+    ArrayList<characters> villianChars = new ArrayList<characters>();
+    ArrayList<characters> helpCharacters = new ArrayList<characters>();
+  
+    Randomizer randLocal = new Randomizer();
+    
+    
 
     public characters (String name, int strength, boolean isVillian) {
          this.name = name;
          this.strength = strength; 
-         Randomizer randLocal = new Randomizer();
-         this.location = randLocal.randomSelect(schoolRooms);
+         
+         int index = randLocal.randomSelect(schoolRooms);
+         this.location = schoolRooms[index];
          this.isVillian = isVillian;
 
     }
+
+    public characters () {
+
+   }
 
    /** Accessors */
     public String getName() {
@@ -35,17 +45,30 @@ public class characters{
     }
 
     public String toString() {
-        return " This is " + this.name ;
+        return this.name ;
     }
 
+    
+    public void addVilian(characters c){
+        villianChars.add(c); 
+    }
 
-
+    public void addChar(characters c){
+        helpCharacters.add(c); 
+    }
 
     public static void main(String[] args) {
-        characters Santana = new characters ("Santana", 12, false);
-        System.out.println(Santana.location);
-        characters Will = new characters("Will", 100, true);
-        characters Rachel = new characters("Rachel", 100, true);
+        
+
+        
+        
+        
+        
+    
+       
+        
+        
+        
        
 
     
